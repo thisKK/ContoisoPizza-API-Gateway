@@ -1,0 +1,29 @@
+{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/WeatherForecast",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "ServiceCreatePizza",
+                    "Port": 80
+                }
+            ],
+            "UpstreamPathTemplate": "/ServiceCreatePizza/wf"
+        },
+        {
+            "DownstreamPathTemplate": "/WeatherForecast",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "ServiceGetPizza",
+                    "Port": 80
+                }
+            ],
+            "UpstreamPathTemplate": "/ServiceGetPizza/wf"
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:80"
+    }
+}
