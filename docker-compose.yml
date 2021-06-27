@@ -1,0 +1,20 @@
+version: "3.5"
+services:
+  service-create-pizza:
+    build:
+      context: .
+      dockerfile: ServiceCreatePizza/Dockerfile
+
+  service-get-pizza:
+    build:
+      context: .
+      dockerfile: ServiceGetPizza/Dockerfile
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Gateway/Dockerfile
+
+    ports:
+      - 80:80
+      - 81:81
